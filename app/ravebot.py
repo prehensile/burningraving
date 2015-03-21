@@ -15,7 +15,11 @@ class RaveBot( object ):
         idx_line = int( os.environ.get( LINE_KEY, "0" ) )
         next_line = lines[ idx_line ].rstrip()
 
-        os.environ[ LINE_KEY ] = str(idx_line+1)
+        next_index = idx_line+1
+        if next_index >= len( lines ):
+            next_index = 0
+
+        os.environ[ LINE_KEY ] = str(next_index)
         return next_line
 
 # commandline testing stub
