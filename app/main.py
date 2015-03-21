@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
 from botkit import botkit
-import asciibot
+import ravebot
 
 # instantiate botkit
-bot = botkit.BotKit( "asciibot" )
+bot = botkit.BotKit( "ravebot" )
 
 # instantiate asciibot
-ascii = asciibot.AsciiBot()
+rave = ravebot.RaveBot()
 
 # go!
-bot.run( ascii )
+bot.run( rave )
